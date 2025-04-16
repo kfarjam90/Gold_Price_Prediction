@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gold Price Predictor</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Gold Price Predictor</h1>
+        <p>This application uses an LSTM neural network to predict future gold prices based on historical data from 2013-2022.</p>
+        
+        <div class="card">
+            <h2>Get Predictions</h2>
+            <p>Click the button below to predict gold prices for future dates.</p>
+            <a href="{{ url_for('predict') }}" class="btn">Predict Gold Prices</a>
+        </div>
+        
+        <div class="card">
+            <h2>About the Model</h2>
+            <p>The model is a Long Short-Term Memory (LSTM) neural network trained on daily gold price data. It uses a sequence of 60 days to predict the next day's price.</p>
+        </div>
+    </div>
+</body>
+</html>

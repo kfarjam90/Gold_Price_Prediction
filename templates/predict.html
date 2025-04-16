@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Predict Gold Prices</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Predict Gold Prices</h1>
+        
+        <form method="POST" action="{{ url_for('predict') }}">
+            <div class="form-group">
+                <label for="days">Number of days to predict (1-30):</label>
+                <input type="number" id="days" name="days" min="1" max="30" value="7" required>
+            </div>
+            <button type="submit" class="btn">Generate Predictions</button>
+        </form>
+        
+        <a href="{{ url_for('home') }}" class="btn back-btn">Back to Home</a>
+    </div>
+</body>
+</html>
